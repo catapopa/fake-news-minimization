@@ -17,9 +17,6 @@ def simulate_icm_spread(G=G, fraction_infected=0.05, probability=0.1, steps=30):
     # Simulate spread
     iterations = model.iteration_bunch(steps)
 
-    # Track infected nodes per iteration
-    # infected_counts = [sum(1 for status in step['status'].values() if status == 1) for step in iterations]
-    
     infected_counts = []
     infected_nodes = []
     for step in iterations:
