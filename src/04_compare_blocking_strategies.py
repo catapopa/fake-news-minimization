@@ -21,21 +21,24 @@ iterations = 30
 G1 = G.copy()
 random_nodes = random.sample(list(G1.nodes()), k)
 G1.remove_nodes_from(random_nodes)
-result_random = simulate_icm_spread(G1)
+[result_random,_] = simulate_icm_spread(G1)
+
 
 # Strategy 2: High-Degree Blocking
 G2 = G.copy()
 degrees = sorted(G2.degree, key=lambda x: x[1], reverse=True)
 degree_nodes = [n for n, _ in degrees[:k]]
 G2.remove_nodes_from(degree_nodes)
-result_degree = simulate_icm_spread(G2)
+[result_degree,_] = simulate_icm_spread(G2)
+
 
 # Strategy 3: High-Betweenness Blocking
 G3 = G.copy()
 betweenness = nx.betweenness_centrality(G3)
 betweenness_nodes = sorted(betweenness, key=betweenness.get, reverse=True)[:k]
 G3.remove_nodes_from(betweenness_nodes)
-result_betweenness = simulate_icm_spread(G3)
+[result_betweenness,_] = simulate_icm_spread(G3)
+
 
 # Plot comparison
 plt.plot(result_random, label="Random", linestyle='--', marker='o')

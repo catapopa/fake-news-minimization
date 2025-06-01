@@ -18,7 +18,8 @@ degrees = sorted(G.degree, key=lambda x: x[1], reverse=True)
 nodes_to_block = [node for node, _ in degrees[:k]]
 G.remove_nodes_from(nodes_to_block)
 
-infected_counts = simulate_icm_spread(G)
+[infected_counts,_] = simulate_icm_spread(G)
+
 
 # Plot results
 plt.plot(infected_counts, marker='o', label=f'Blocked {k} nodes')

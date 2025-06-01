@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 from helper import simulate_icm_spread
 
-infected_counts = simulate_icm_spread()
+[infected_counts,_] = simulate_icm_spread()
 
 # Plot results
 plt.plot(infected_counts, marker='o')
