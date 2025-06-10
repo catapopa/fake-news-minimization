@@ -4,6 +4,7 @@ import ndlib.models.ModelConfig as mc
 import matplotlib.pyplot as plt
 import random
 import pickle
+from genetic import genetic_blocking_strategy
 from helper import simulate_icm_spread
 
 # This script compares different strategies for blocking nodes in a Barabási–Albert scale-free network
@@ -40,10 +41,16 @@ G3.remove_nodes_from(betweenness_nodes)
 [result_betweenness,_] = simulate_icm_spread(G3)
 
 
+G4 = G.copy()
+greedy_nodes = genetic_blocking_strategy(G4, k)
+G4.remove_nodes_from(greedy_nodes)
+[ga_results,_] = simulate_icm_spread(G4)
+
 # Plot comparison
 plt.plot(result_random, label="Random", linestyle='--', marker='o')
 plt.plot(result_degree, label="High Degree", linestyle='-', marker='s')
 plt.plot(result_betweenness, label="High Betweenness", linestyle='-.', marker='^')
+# plt.plot(ga_results, label="Genetic", linestyle='-.', marker='^')
 plt.xlabel("Iteration")
 plt.ylabel("Infected Nodes")
 plt.title(f"Spread Reduction with {k} Blocked Nodes")
