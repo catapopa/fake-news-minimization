@@ -6,6 +6,7 @@ import random
 import pickle
 from genetic import genetic_blocking_strategy
 from helper import simulate_icm_spread
+from config import CONFIG
 
 # This script compares different strategies for blocking nodes in a Barabási–Albert scale-free network
 # Random Blocking — baseline noise
@@ -42,7 +43,7 @@ G3.remove_nodes_from(betweenness_nodes)
 
 
 G4 = G.copy()
-greedy_nodes = genetic_blocking_strategy(G4, k)
+greedy_nodes = genetic_blocking_strategy(G4, k, CONFIG["genetic_config"])
 G4.remove_nodes_from(greedy_nodes)
 [ga_results,_] = simulate_icm_spread(G4)
 

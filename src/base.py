@@ -2,6 +2,7 @@ import random
 import networkx as nx
 from genetic import genetic_blocking_strategy
 from greedy import greedy_blocking_strategy
+from config import CONFIG
 
 def random_blocking(G, k):
     return random.sample(list(G.nodes()), k)
@@ -15,5 +16,5 @@ def betweenness_blocking(G, k):
 def greedy_blocking(G, k):
     return greedy_blocking_strategy(G, k)
 
-def genetic_blocking(G, k):
-    return genetic_blocking_strategy(G, k)
+def genetic_blocking(G, k, config=CONFIG["genetic_config"]):
+    return genetic_blocking_strategy(G, k, config)
