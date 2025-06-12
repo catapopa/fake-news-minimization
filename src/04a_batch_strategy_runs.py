@@ -2,8 +2,7 @@ import networkx as nx
 import csv
 from base import betweenness_blocking, degree_blocking, genetic_blocking, greedy_blocking, random_blocking
 from helper import simulate_icm_spread
-import sys
-import os
+from config import CONFIG
 
 def run_batch(config):
     with open("strategy_results.csv", "w", newline='') as file:
@@ -32,17 +31,14 @@ def run_batch(config):
                     ])
 
 if __name__ == "__main__":
-    sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-    from config import CONFIG as config
-
     # Define strategies
     STRATEGY_FUNCTIONS = {
         "random": lambda G, k: random_blocking(G, k),
         "degree": lambda G, k: degree_blocking(G, k),
         "betweenness": lambda G, k: betweenness_blocking(G, k),
         "greedy": lambda G, k: greedy_blocking(G, k),
-        "genetic": lambda G, k: genetic_blocking(G, k, config["genetic_config"])
+        "genetic": lambda G, k: genetic_blocking(G, k, CONFIG["genetic_config"])
     }
 
     # Run batch processing
-    run_batch(config)
+    run_batch(CONFIG)

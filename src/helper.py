@@ -41,3 +41,23 @@ def simulate_icm_spread_total(G=G, fraction_infected=0.05, probability=0.1, step
         all_infected.update(infected)
 
     return all_infected
+
+def simulate_icm_spread_total_custom(G, blocked_nodes=None, fraction_infected=0.05, probability=0.1, steps=30):
+    G_copy = G.copy()
+    if blocked_nodes:
+        G_copy.remove_nodes_from(blocked_nodes)
+
+    model = ep.IndependentCascadesModel(G_copy)
+    config = mc.Configuration()
+    config.add_model_parameter('fraction_infected', fraction_infected)
+    config.add_model_parameter('probability', probability)
+    model.set_initial_status(config)
+
+    iterations = model.iteration_bunch(steps)
+
+    all_infected = set()
+    for step in iterations:
+        infected = [n for n, status in step['status'].items() if status == 1]
+        all_infected.update(infected)
+
+    return len(all_infected)

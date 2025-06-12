@@ -16,8 +16,7 @@ from config import CONFIG
 # Load the graph
 G = pickle.load(open("graph.pkl", "rb"))
 
-k = 5  # number of nodes to block
-iterations = 30
+k = CONFIG["k"]  # Number of nodes to block
 
 # Strategy 1: Random Blocking
 G1 = G.copy()
@@ -42,16 +41,16 @@ G3.remove_nodes_from(betweenness_nodes)
 [result_betweenness,_] = simulate_icm_spread(G3)
 
 
-G4 = G.copy()
-greedy_nodes = genetic_blocking_strategy(G4, k, CONFIG["genetic_config"])
-G4.remove_nodes_from(greedy_nodes)
-[ga_results,_] = simulate_icm_spread(G4)
+# G4 = G.copy()
+# greedy_nodes = genetic_blocking_strategy(G4, k, CONFIG["genetic_config"])
+# G4.remove_nodes_from(greedy_nodes)
+# [ga_results,_] = simulate_icm_spread(G4)
 
 # Plot comparison
 plt.plot(result_random, label="Random", linestyle='--', marker='o')
 plt.plot(result_degree, label="High Degree", linestyle='-', marker='s')
 plt.plot(result_betweenness, label="High Betweenness", linestyle='-.', marker='^')
-plt.plot(ga_results, label="Genetic", linestyle='-.', marker='^')
+# plt.plot(ga_results, label="Genetic", linestyle='-.', marker='^')
 plt.xlabel("Iteration")
 plt.ylabel("Infected Nodes")
 plt.title(f"Spread Reduction with {k} Blocked Nodes")

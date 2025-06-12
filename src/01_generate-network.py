@@ -1,10 +1,11 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import pickle
+from config import CONFIG
 
 # Create a scale-free network
-num_nodes = 100  # You can increase this later
-edges_per_node = 2
+num_nodes = CONFIG["num_nodes"] 
+edges_per_node = CONFIG["edges_per_node"]
 G = nx.barabasi_albert_graph(num_nodes, edges_per_node)
 
 with open("graph.pkl", "wb") as f:

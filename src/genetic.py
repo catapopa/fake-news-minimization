@@ -3,8 +3,8 @@ from helper import simulate_icm_spread_total
 import copy
 import pickle
 import matplotlib.pyplot as plt
-import sys
-import os
+from config import CONFIG
+
 
 def evaluate_fitness(G, candidate, steps=30, runs=5):
     total = 0
@@ -87,27 +87,19 @@ def genetic_blocking_strategy(G, k, config, plot=True):
 
 if __name__ == "__main__":
     G = pickle.load(open("graph.pkl", "rb"))
-    k = 5
-    sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-    from config import CONFIG as config
-    
-    # config = {
-    #     "pop_size": 50,
-    #     "generations": 100,
-    #     "mutation_rate": 0.1,
-    #     "tournament_size": 3,
-    #     "elitism_count": 2,
-    #     "steps": 30
-    # }
+    k = CONFIG["k"] 
 
-    # top config = {
-    #     'pop_size': 20,
-    #     'generations': 30,
-    #     'mutation_rate': 0.1,
-    #     'tournament_size': 5,
-    #     'elitism_count': 1,
-    #     'steps': 30
-    # }
+    config = {
+        'pop_size': 40,
+        'generations': 100,
+        'mutation_rate': 0.3,
+        'tournament_size': 5,
+        'elitism_count': 1,
+        'steps': 30
+    }
 
-    selected_nodes = genetic_blocking_strategy(G, k, config["genetic_config"])
+    selected_nodes = genetic_blocking_strategy(G, k, config)
+    # selected_nodes = genetic_blocking_strategy(G, k, CONFIG["genetic_config"])
+    fitness = evaluate_fitness(G, selected_nodes, steps=config['steps'])
+    print(f"Fitness: {fitness}")
     print("Blocked nodes by GA:", selected_nodes)

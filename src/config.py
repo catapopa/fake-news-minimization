@@ -6,15 +6,14 @@ CONFIG = {
     "runs": 100,
     "fraction_infected": 0.05,
     "probability": 0.1,
-    "strategies": ["random", "degree", "betweenness"],
-    # "strategies": ["random", "degree", "betweenness", "greedy", "genetic"],
+    "strategies": ["random", "degree", "betweenness", "greedy", "genetic"],
     "output_file": "strategy_results.csv",
     "genetic_config": {
-        "pop_size": 30,
-        "generations": 50,
-        "mutation_rate": 0.1,
-        "tournament_size": 3,
-        "elitism_count": 1,
-        "steps": 30
+        'pop_size': 40,
+        'generations': 100,
+        'mutation_rate': 0.3,
+        'tournament_size': 5,
+        'elitism_count': 1,
+        'steps': 30
     }
 }

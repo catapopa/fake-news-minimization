@@ -1,5 +1,6 @@
 import networkx as nx
 import pickle
+from config import CONFIG
 from helper import simulate_icm_spread
 
 
@@ -51,6 +52,6 @@ def greedy_blocking_strategy(G, k, num_simulations=5, max_steps=10):
 # Example usage
 if __name__ == "__main__":
     G = pickle.load(open("graph.pkl", "rb"))
-    k = 5
+    k = CONFIG["k"] 
     selected_nodes = greedy_blocking_strategy(G, k)
     print("Blocked nodes:", selected_nodes)
