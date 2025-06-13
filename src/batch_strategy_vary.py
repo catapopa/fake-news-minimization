@@ -35,12 +35,12 @@ config = {
     "runs": 50,
     "strategies": ["random", "degree", "betweenness", "greedy", "genetic"],
     "genetic_config": {
-        "pop_size": 30,
-        "generations": 50,
-        "mutation_rate": 0.1,
-        "tournament_size": 5,
-        "elitism_count": 1,
-        "steps": 30
+        'generations': 100,
+        'pop_size': 40,
+        'mutation_rate': 0.1,
+        'tournament_size': 3,
+        'elitism_count': 1,
+        'steps': 30
     }
 }
 

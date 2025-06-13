@@ -4,7 +4,7 @@ import pickle
 
 G = pickle.load(open("graph.pkl", "rb"))
 
-def simulate_icm_spread(G=G, fraction_infected=0.1, probability=0.1, steps=30):
+def simulate_icm_spread(G=G, fraction_infected=0.05, probability=0.1, steps=30):
     # Setup ICM model
     model = ep.IndependentCascadesModel(G)
 

@@ -1,13 +1,9 @@
 import itertools
-import random
 import pickle
-import copy
 import pandas as pd
-import networkx as nx
 import time
 import matplotlib.pyplot as plt
 from genetic import crossover, evaluate_fitness, initialize_population, mutate, select_parents
-from helper import simulate_icm_spread
 
 
 def genetic_blocking_strategy(G, k, generations, pop_size, mutation_rate, elitism_count, tournament_size):

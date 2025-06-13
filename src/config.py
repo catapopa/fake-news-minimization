@@ -9,10 +9,10 @@ CONFIG = {
     "strategies": ["random", "degree", "betweenness", "greedy", "genetic"],
     "output_file": "strategy_results.csv",
     "genetic_config": {
-        'pop_size': 40,
         'generations': 100,
-        'mutation_rate': 0.3,
-        'tournament_size': 5,
+        'pop_size': 40,
+        'mutation_rate': 0.1,
+        'tournament_size': 3,
         'elitism_count': 1,
         'steps': 30
     }
