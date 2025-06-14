@@ -72,16 +72,16 @@ def genetic_blocking_strategy(G, k, config, plot=True):
 
     best_individual = max(population, key=lambda indiv: evaluate_fitness(G, indiv, steps=steps))
     print(f"Best fitness: {best_individual}")
-    if plot:
-        plt.figure(figsize=(10, 5))
-        plt.plot(best_fitnesses, marker="o")
-        plt.title("Genetic Algorithm Convergence")
-        plt.xlabel("Generation")
-        plt.ylabel("Best Fitness (negative spread)")
-        plt.grid(True)
-        plt.tight_layout()
-        plt.savefig("ga_convergence_plot.png")
-        plt.show()
+    # if plot:
+    #     plt.figure(figsize=(10, 5))
+    #     plt.plot(best_fitnesses, marker="o")
+    #     plt.title("Genetic Algorithm Convergence")
+    #     plt.xlabel("Generation")
+    #     plt.ylabel("Best Fitness (negative spread)")
+    #     plt.grid(True)
+    #     plt.tight_layout()
+    #     plt.savefig("ga_convergence_plot.png")
+    #     plt.show()
 
     return best_individual
 
@@ -98,8 +98,8 @@ if __name__ == "__main__":
         'steps': 30
     }
 
-    selected_nodes = genetic_blocking_strategy(G, k, config)
-    # selected_nodes = genetic_blocking_strategy(G, k, CONFIG["genetic_config"])
+    # selected_nodes = genetic_blocking_strategy(G, k, config)
+    selected_nodes = genetic_blocking_strategy(G, k, CONFIG["genetic_config"])
     fitness = evaluate_fitness(G, selected_nodes, steps=config['steps'])
     print(f"Fitness: {fitness}")
     print("Blocked nodes by GA:", selected_nodes)

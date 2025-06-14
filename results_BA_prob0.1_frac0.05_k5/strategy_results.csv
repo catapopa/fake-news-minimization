@@ -1,6 +1,6 @@
 strategy,run,iteration,infected,infected_nodes
-random,0,0,4,"30,48,54,77"
-random,0,1,2,"17,27"
+random,0,0,4,"25,34,39,68"
+random,0,1,1,6
 random,0,2,0,
 random,0,3,0,
 random,0,4,0,
@@ -29,8 +29,8 @@ random,0,26,0,
 random,0,27,0,
 random,0,28,0,
 random,0,29,0,
-degree,0,0,4,"18,24,71,91"
-degree,0,1,2,"40,84"
+degree,0,0,4,"19,26,63,75"
+degree,0,1,2,"4,80"
 degree,0,2,0,
 degree,0,3,0,
 degree,0,4,0,
@@ -59,7 +59,7 @@ degree,0,26,0,
 degree,0,27,0,
 degree,0,28,0,
 degree,0,29,0,
-betweenness,0,0,4,"35,45,75,95"
+betweenness,0,0,4,"26,31,38,82"
 betweenness,0,1,0,
 betweenness,0,2,0,
 betweenness,0,3,0,
@@ -89,9 +89,9 @@ betweenness,0,26,0,
 betweenness,0,27,0,
 betweenness,0,28,0,
 betweenness,0,29,0,
-greedy,0,0,4,"12,14,69,76"
-greedy,0,1,0,
-greedy,0,2,0,
+greedy,0,0,4,"25,63,79,89"
+greedy,0,1,1,57
+greedy,0,2,1,77
 greedy,0,3,0,
 greedy,0,4,0,
 greedy,0,5,0,
