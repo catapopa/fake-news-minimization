@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import ast
 
 # Load your results CSV
-df = pd.read_csv("./results-ga/ga_hyperparameter_tuning_results.csv")
+df = pd.read_csv("./results/results-ga/ga_hyperparameter_tuning_results.csv")
 
 # Convert stringified lists back to Python objects
 df['convergence'] = df['convergence'].apply(ast.literal_eval)

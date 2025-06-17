@@ -33,9 +33,9 @@ def run_batch(config):
 if __name__ == "__main__":
     # Define strategies
     STRATEGY_FUNCTIONS = {
-        "random": lambda G, k: random_blocking(G, k),
-        "degree": lambda G, k: degree_blocking(G, k),
-        "betweenness": lambda G, k: betweenness_blocking(G, k),
+        # "random": lambda G, k: random_blocking(G, k),
+        # "degree": lambda G, k: degree_blocking(G, k),
+        # "betweenness": lambda G, k: betweenness_blocking(G, k),
         "greedy": lambda G, k: greedy_blocking(G, k),
         "genetic": lambda G, k: genetic_blocking(G, k, CONFIG["genetic_config"])
     }

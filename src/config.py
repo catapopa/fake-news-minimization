@@ -6,7 +6,9 @@ CONFIG = {
     "runs": 100,
     "fraction_infected": 0.05,
     "probability": 0.1,
-    "strategies": ["random", "degree", "betweenness", "greedy", "genetic"],
+    # "strategies": ["random", "degree", "betweenness"],
+    # "strategies": ["random", "degree", "betweenness", "greedy", "genetic"],
+    "strategies": ["greedy", "genetic"],
     "output_file": "strategy_results.csv",
     "genetic_config": {
         'generations': 100,

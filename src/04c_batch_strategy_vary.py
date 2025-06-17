@@ -57,7 +57,7 @@ def generate_graph(exp):
 def run_experiment(exp):
     output_dir = exp["name"]
     os.makedirs(output_dir, exist_ok=True)
-    output_file = os.path.join(output_dir, "strategy_results.csv")
+    output_file = os.path.join(output_dir, "strategy_results_multiple.csv")
 
     with open(output_file, "w", newline='') as file:
         writer = csv.writer(file)

@@ -13,7 +13,7 @@ G_blocked = copy.deepcopy(G)
 G_blocked.remove_nodes_from(blocked_nodes)
 
 # Run multiple simulations and collect totals
-n_runs = 100
+n_runs = 1000
 original_totals = []
 blocked_totals = []
 
