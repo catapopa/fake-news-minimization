@@ -1,0 +1,22 @@
+cpopa@Catalinas-MacBook-Pro fake-news-minimization % /usr/local/bin/python3 /Users/cpopa/Projects/fake-news-minimization/src/real-netwo
+rk.py
+Loaded Facebook network with 4039 nodes and 88234 edges.
+Largest component: 4039 nodes.
+Running strategy: random
+random: Mean infected = 3116.69 ± 32.68
+Running strategy: degree
+degree: Mean infected = 2992.62 ± 31.46
+Running strategy: betweenness
+betweenness: Mean infected = 3019.49 ± 31.68
+Running strategy: greedy
+Selected node 2751 for blocking (expected infections: 3073.60)
+Selected node 426 for blocking (expected infections: 3068.80)
+Selected node 599 for blocking (expected infections: 3065.40)
+Selected node 289 for blocking (expected infections: 3072.60)
+Selected node 1652 for blocking (expected infections: 3063.60)
+greedy: Mean infected = 3121.44 ± 30.33
+Running strategy: genetic
+Best fitness: [1216, 623, 2675, 2133, 3256]
+genetic: Mean infected = 3113.18 ± 28.51
+2025-06-17 23:20:23.914 Python[33277:25162772] +[IMKClient subclass]: chose IMKClient_Modern
+2025-06-17 23:20:23.914 Python[33277:25162772] +[IMKInputSession subclass]: chose IMKInputSession_Modern
