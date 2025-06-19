@@ -12,7 +12,7 @@ from base import genetic_blocking, random_blocking, degree_blocking, betweenness
 G = nx.read_edgelist("facebook_combined.txt", nodetype=int)
 Gcc = G.subgraph(max(nx.connected_components(G), key=len)).copy()
 
-budgets = [5, 40, 80]
+budgets = [5, 40]
 probabilities = [0.1, 0.2, 0.3]
 
 results = {}  # {(k, p): {strategy: (mean, std, runtime)}}
