@@ -1,0 +1,117 @@
+cpopa@Catalinas-MacBook-Pro fake-news-minimization % /usr/local/bin/python3 /Users/cpopa/Projects/fake-news-minimization/src/08c_real_network.py
+
+--- Running scenario: k=5, p=0.1 ---
+  Running strategy: random
+    random: Mean infected = 3185.80 ± 28.90, Time = 9.57 seconds
+  Running strategy: degree
+    degree: Mean infected = 3079.65 ± 31.85, Time = 9.84 seconds
+  Running strategy: betweenness
+    betweenness: Mean infected = 3102.08 ± 29.53, Time = 69.04 seconds
+  Running strategy: greedy
+Selected node 3437 for blocking (expected infections: 3062.00)
+Selected node 429 for blocking (expected infections: 3020.40)
+Selected node 371 for blocking (expected infections: 3029.20)
+Selected node 2597 for blocking (expected infections: 3016.20)
+Selected node 2601 for blocking (expected infections: 3026.20)
+    greedy: Mean infected = 3151.11 ± 28.18, Time = 8999.47 seconds
+  Running strategy: genetic
+Best fitness: [3045, 139, 1650, 2550, 535]
+    genetic: Mean infected = 3193.79 ± 27.57, Time = 4250.42 seconds
+
+--- Running scenario: k=5, p=0.2 ---
+  Running strategy: random
+    random: Mean infected = 3186.30 ± 27.25, Time = 9.42 seconds
+  Running strategy: degree
+    degree: Mean infected = 3082.83 ± 30.55, Time = 9.05 seconds
+  Running strategy: betweenness
+    betweenness: Mean infected = 3099.35 ± 29.52, Time = 67.62 seconds
+  Running strategy: greedy
+Selected node 0 for blocking (expected infections: 3063.40)
+Selected node 155 for blocking (expected infections: 3020.20)
+Selected node 1109 for blocking (expected infections: 3042.20)
+Selected node 3213 for blocking (expected infections: 3033.20)
+Selected node 3790 for blocking (expected infections: 3025.80)
+    greedy: Mean infected = 3159.30 ± 28.05, Time = 9106.33 seconds
+  Running strategy: genetic
+Best fitness: [3809, 579, 845, 856, 1757]
+    genetic: Mean infected = 3179.18 ± 29.21, Time = 4186.61 seconds
+
+--- Running scenario: k=5, p=0.3 ---
+  Running strategy: random
+    random: Mean infected = 3184.27 ± 29.91, Time = 9.44 seconds
+  Running strategy: degree
+    degree: Mean infected = 3080.70 ± 24.07, Time = 9.10 seconds
+  Running strategy: betweenness
+    betweenness: Mean infected = 3101.16 ± 27.32, Time = 68.18 seconds
+  Running strategy: greedy
+Selected node 1684 for blocking (expected infections: 3073.00)
+Selected node 3519 for blocking (expected infections: 3045.20)
+Selected node 3437 for blocking (expected infections: 3028.40)
+Selected node 2538 for blocking (expected infections: 2997.60)
+Selected node 3988 for blocking (expected infections: 3006.00)
+    greedy: Mean infected = 3137.36 ± 30.23, Time = 8941.64 seconds
+  Running strategy: genetic
+Best fitness: [67, 594, 1684, 3768, 2810]
+    genetic: Mean infected = 3164.52 ± 29.43, Time = 4314.58 seconds
+
+--- Running scenario: k=40, p=0.1 ---
+  Running strategy: random
+    random: Mean infected = 3149.34 ± 28.45, Time = 8.98 seconds
+  Running strategy: degree
+    degree: Mean infected = 3031.90 ± 30.21, Time = 8.65 seconds
+  Running strategy: betweenness
+    betweenness: Mean infected = 2983.34 ± 35.04, Time = 71.85 seconds
+  Running strategy: greedy
+Selected node 1844 for blocking (expected infections: 3054.20)
+Selected node 3235 for blocking (expected infections: 3062.80)
+Selected node 2783 for blocking (expected infections: 3073.20)
+Selected node 1186 for blocking (expected infections: 3066.00)
+Selected node 303 for blocking (expected infections: 3068.80)
+Selected node 776 for blocking (expected infections: 3065.20)
+Selected node 3437 for blocking (expected infections: 3055.20)
+Selected node 1013 for blocking (expected infections: 3010.20)
+Selected node 2564 for blocking (expected infections: 3013.20)
+Selected node 726 for blocking (expected infections: 3013.20)
+Selected node 799 for blocking (expected infections: 3015.40)
+Selected node 1684 for blocking (expected infections: 3018.00)
+Selected node 1654 for blocking (expected infections: 2976.60)
+Selected node 3593 for blocking (expected infections: 2987.60)
+Selected node 0 for blocking (expected infections: 2974.40)
+Selected node 1114 for blocking (expected infections: 2952.20)
+Selected node 3459 for blocking (expected infections: 2954.60)
+Selected node 3274 for blocking (expected infections: 2953.80)
+Selected node 1775 for blocking (expected infections: 2947.80)
+Selected node 3176 for blocking (expected infections: 2944.40)
+Selected node 3042 for blocking (expected infections: 2953.00)
+Selected node 3409 for blocking (expected infections: 2954.40)
+Selected node 570 for blocking (expected infections: 2943.80)
+Selected node 1956 for blocking (expected infections: 2945.80)
+Selected node 1456 for blocking (expected infections: 2932.20)
+Selected node 1238 for blocking (expected infections: 2944.60)
+Selected node 1402 for blocking (expected infections: 2936.60)
+Selected node 990 for blocking (expected infections: 2947.80)
+Selected node 877 for blocking (expected infections: 2946.20)
+Selected node 3318 for blocking (expected infections: 2946.00)
+Selected node 365 for blocking (expected infections: 2936.40)
+Selected node 3120 for blocking (expected infections: 2947.00)
+Selected node 3109 for blocking (expected infections: 2932.40)
+Selected node 1870 for blocking (expected infections: 2927.20)
+Selected node 414 for blocking (expected infections: 2938.20)
+Selected node 766 for blocking (expected infections: 2925.20)
+Selected node 3834 for blocking (expected infections: 2919.60)
+Selected node 2672 for blocking (expected infections: 2918.60)
+Selected node 219 for blocking (expected infections: 2916.00)
+Selected node 163 for blocking (expected infections: 2914.20)
+    greedy: Mean infected = 3075.44 ± 27.11, Time = 71679.36 seconds
+  Running strategy: genetic
+Best fitness: [2434, 2821, 5, 261, 3594, 1932, 2444, 1804, 1550, 2832, 3986, 1429, 3991, 664, 404, 414, 3872, 3488, 1570, 1574, 1497, 1113, 3554, 1635, 482, 3963, 616, 107, 620, 3309, 3824, 116, 372, 2935, 1785, 2171, 3196, 893, 2302, 971]
+    genetic: Mean infected = 3129.63 ± 29.78, Time = 4203.11 seconds
+
+--- Running scenario: k=40, p=0.2 ---
+  Running strategy: random
+    random: Mean infected = 3149.29 ± 27.97, Time = 9.34 seconds
+  Running strategy: degree
+    degree: Mean infected = 3028.22 ± 31.97, Time = 8.72 seconds
+  Running strategy: betweenness
+    betweenness: Mean infected = 2997.21 ± 27.68, Time = 68.49 seconds
+  Running strategy: greedy

@@ -8,7 +8,7 @@ from base import genetic_blocking, random_blocking, degree_blocking, betweenness
 
 # --- PARAMETERS TO SWEEP ---
 blocking_percents = [0.1, 0.5, 1, 2, 5]  # Percentages of nodes to block
-runs = 1
+runs = 100
 steps = 30
 fraction_infected = 0.05
 probability = 0.1
